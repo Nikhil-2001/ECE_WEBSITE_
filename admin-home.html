@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HOMEPAGE</title>
+    <meta charset="utf-8">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="Css_Files/style-admin-home.css">
+    <link rel="stylesheet" type="text/css" href="Css_Files/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+<body>
+  <header class="cd-header container flex justify-between items-center">
+    <a href="index.html"><img src="img/two-houses.svg" style="position: absolute; left: 0%; top: 10%;"></a>
+    <img src="img/Security.svg" style="width: 100%; height: 100%; position: absolute;
+   top:15%; left:15%">
+   <h3 id="main_heading">Admin Page</h3>
+
+        
+
+  </header>
+  
+  <main class="cd-main">
+    
+    <div class="searchBox">
+
+            <input class="searchInput"type="text" name="" placeholder="Search">
+            <button class="searchButton" href="#">
+                <i class="material-icons">
+                    search
+                </i>
+            </button>
+  </div>
+        <div class="catalogue-holder">
+    <div class="card"> 
+    <div class='imgBox'>
+      Search
+      <img src="img/report.svg" style="width: 200px;height: 200px; padding-top: 10%; padding-left: 3%;">
+
+    </div> 
+    <div class="admin-search" >
+      <h2>Search</h2>
+  
+    <form action="SearchByRoll.php" method="post">
+      <label for="roll"><b>Enter roll no :  </b></label>
+        <input type="text" placeholder="eg : 160218735031" name="rollno" required>
+      <input type="submit" name="search1" value="Search" />
+    </form>
+    
+<br>
+    <form action="SearchByComp.php" method="post">
+      <label for="comps">Component :   </label>
+    <select name="comp">
+      <option value="default">--Choose comp--</option>
+      <option value="nodemcu">Nodemcu(ESP8266)</option>
+      <option value="raspberry pi">Raspberry pi 3</option>
+      <option value="relay">relay</option>
+      <option value="servo">Servo</option>
+    </select>
+    <input type="submit" name="search2" value="Search" />
+    </form>
+<br>
+</div>
+</div>
+
+<div class='card2'>
+  <div class='imgBox'>
+    Update Records
+    <img src="img/refresh.svg" style="width: 4em; height: 5em; padding-left: 30%;">
+  </div>
+<div class="admin-update-records">
+<form action="update.php" method="post">
+  <h2>Update Records</h2><br>
+  <label for="rolls"><b>Enter roll no   :  </b></label>
+    <input type="text" placeholder="eg : 160218735031" name="roll_no" required><br>
+    <label for="phno"><b>Enter Phone no :  </b></label>
+      <input type="tel" placeholder="eg : 9123456782" name="phno" required><br>
+      <label for="phno"><b>Enter Mail-id:  </b></label>
+      <input type="email" placeholder="eg : Abc@gmail.com" name="mail_id" required><br>
+      <label for="date1"><b>Enter Date of Return :  </b></label>
+        <input type="date" placeholder="eg : 2020-04-01" name="date" required><br>
+        <label for="comps">Component :   </label>
+      <select name="comps">
+        <option value="default">--Choose comp--</option>
+        <option value="nodemcu">Nodemcu(ESP8266)</option>
+        <option value="raspberry pi">Raspberry pi 3</option>
+        <option value="relay">relay</option>
+        <option value="servo">Servo</option>
+      </select><br>
+      <label for="count"><b>Enter count :  </b></label>
+        <input type="number" placeholder="default 1" name="count"><br>
+       <label for="phno"><b>Enter OTP:  </b></label>
+      <input type="number" placeholder="6 digit No." name="OTP" required><br> 
+  <input type="submit" name="update" value="Update" />
+
+</form>
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class='imgBox'>
+    component Renewal
+    <img src="img/renew.svg" style="width: 3em; height: 4em; padding-left: 15%;">
+  </div>
+
+<div class="admin-component-renewal" >
+<form action="#" method="post">
+  <h2>component Renewal</h2>
+  <label for="rolls"><b>Enter roll no   :  </b></label>
+  <input type="text" placeholder="eg : 160218735031" name="roll_no" required><br>
+  <label for="date1"><b>Enter Date of Return :  </b></label>
+        <input type="date" placeholder="eg : 2020-04-01" name="date" required><br>
+</form>
+
+</div>
+</div>
+
+
+
+</div>
+    
+  </main>
+  
+<script src="Css_Files/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+<script src="Css_Files/assets/js/main.js"></script>
+</body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  
+</html>

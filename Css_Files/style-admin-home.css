@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Pacifico&display=swap');
+*{
+	margin:0;
+	padding:0;
+}
+
+#main_heading{
+    position: absolute;
+    top:2%;
+    left: 35%;
+   font-family: 'Berkshire Swash', cursive;
+   font-family: 'Pacifico', cursive;
+   font-size: 5em;
+}
+
+
+.searchBox {
+    position: absolute;
+    top: -80px;
+    left:92%;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+.catalogue-holder{
+	display: grid;
+	grid-template-columns:repeat(auto-fit, minmax(400px , 1fr));
+	justify-content: center;
+	align-content: center;
+	height: auto;
+	grid-auto-rows: minmax(100px, auto);
+	grid-auto-columns: minmax(200px , auto);
+	box-sizing: border-box;
+}
+
+/*.catalogue-holder{
+	max-width: 1000px;
+	margin:100px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}*/
+
+.card{
+	position: relative;
+	margin-left: 5em;
+	width:300px;
+	height: 400px;
+	transform-style: preserve-3d;
+	transform: perspective(2000px);
+	transition: 1s;
+	background: #fff;
+	box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  	border-radius: 10px;
+    margin-top:10em;
+}
+.card:hover{
+	transform: perspective(2000px) rotate(-10deg);
+	box-shadow: box-shadow: inset 20px 0 50px rgba(0,0,0,.5); 
+}
+
+.card .imgBox{
+	position:relative;
+	background: rgba(181,204,238,1);
+    background-image: linear-gradient(to right top, #2f8e77, #52a08b, #71b39f, #8fc5b5, #acd8ca, #acd5c7, #acd3c4, #acd0c1, #90b8a4, #76a088, #5d886c, #467150);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5ccee', endColorstr='#b5ccee', GradientType=1 );
+	width:100%;
+	height: 100%;
+	border:1px solid #000;
+	box-sizing: border-box;
+	transform-origin: left;
+	z-index:1;
+	transition: 1s;
+	border-radius: 10px;
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 900;
+    font-size: 3em;
+    padding-top: 20%;
+    padding-left: 10%;
+}
+.card:hover .imgBox{
+	transform: rotateY(-135deg);
+}
+.card .admin-search{
+	position: absolute;
+	top:0;
+	left: 0;
+	box-sizing:border-box;
+	padding:20px; 
+}
+.card .admin-component-renewal{
+	position: absolute;
+	top:0;
+	left: 0;
+	box-sizing:border-box;
+	padding:20px; 
+}
+
+/*.card .imgBox .img{
+	position: relative;
+	width:100%;
+	height: 100%;
+	object-fit: cover;	
+}*/
+
+/*.admin-search{
+	padding-top: 2em;
+	border: black 2px solid;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	box-shadow: 20px 20px 50px 15px grey;
+}*/
+
+/*.admin-update-records{
+	
+	background-color: white;
+	border: black 2px solid;
+	justify-content: center;
+	padding-top: 2em;
+	align-content: center;
+	text-align: center;
+	border-radius: 30px;
+	box-shadow: 20px 20px 50px 15px grey;
+}*/
+
+input{
+	margin-bottom: 1em;
+}
+
+
+/*.admin-component-renewal
+{	
+	padding-top: 2em;
+	background-color: white;
+	border: black 2px solid;
+	justify-content: center;
+    align-content: center;
+	text-align: center;
+	border-radius: 30px;
+	box-shadow: 20px 20px 50px 15px grey;
+}*/
+.card2{
+	position: relative;
+	margin-left: 2em;
+	width:400px;
+	height: 440px;
+	transform-style: preserve-3d;
+	transform: perspective(2000px);
+	transition: 1s;
+	-webkit-box-shadow: 9px 5px 22px 0px rgba(50, 50, 50, 0.73);
+-moz-box-shadow:    9px 5px 22px 0px rgba(50, 50, 50, 0.73);
+box-shadow:         9px 5px 22px 0px rgba(50, 50, 50, 0.73);
+  	border-radius: 10px;
+    margin-top:10em;
+}
+.card2:hover{
+	transform: perspective(2000px) rotate(-10deg);
+	box-shadow: box-shadow: inset 20px 0 50px rgba(0,0,0,.5); 
+}
+
+.card2 .imgBox{
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 900;
+    font-size: 3em;
+	position:relative;
+	background: rgba(255,224,235,1);
+    background-image: linear-gradient(to right top, #ee9816, #ff955c, #ff9c92, #ffacbf, #ffc1de, #ffc1dd, #ffc0dd, #ffc0dc, #ffabbb, #ff9b8c, #ff9555, #e49900);
+	width:100%;
+	height: 100%;
+	border:1px solid #000;
+	box-sizing: border-box;
+	transform-origin: left;
+	z-index:1;
+	transition: 1s; 
+	border-radius: 10px;
+    padding-top: 20%;
+}
+.card2:hover .imgBox{
+	transform: rotateY(-135deg);
+}
+.card2 .admin-update-records{
+	position: absolute;
+	top:0;
+	left: 0;
+	box-sizing:border-box;
+	padding:20px;
+
+}
+.admin-update-records{
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 700;
+}
+.admin-update-records input{
+    height: 2em;
+    color: #8f2e50;
+    background-color: #c5cfde;
+    margin-bottom: 1em;
+    border-radius: 2em;
+
+}
+.admin-update-records select {
+    height: 2em;
+    color: #8f2e50;
+    background-color: #c5cfde;
+    margin-bottom: 1em;
+    border-radius: 2em;
+}
+
+
+.admin-component-renewal h2{
+	margin-bottom: 2em;
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 700;
+}
+.admin-search h2{
+	margin-bottom: 2em;
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 700;
+}
+
+.admin-component-renewal label {
+     font-family: 'Sansita Swashed', cursive;
+     font-weight: 700;
+     font-size: 1.5em;
+}
+.admin-search label{
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.admin-component-renewal input{
+    height: 2em;
+    color: #8f2e50;
+    background-color: #c5cfde;
+    margin-bottom: 3em;
+    border-radius: 2em;
+}
+.admin-search input{
+    height: 2em;
+    color: #8f2e50;
+    background-color: #c5cfde;
+    margin-bottom: 2em;
+    border-radius: 2em;
+}
+.admin-search select {
+    height: 2em;
+    color: #8f2e50;
+    background-color: #c5cfde;
+    margin-bottom: 3em;
+    border-radius: 2em;
+}
+
+
+nav{
+    height: 3.5rem;
+    width: 100vw;
+    color: white;
+    background-color: #057d7b;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+input{
+	background-color: yellow;
+	border-radius: 5px;
+	margin-bottom: 1em;
+}
+
+/*Styling logo*/
+.logo{
+    padding:1vh 1vw;
+    text-align: center;
+}
+.logo img {
+    height: 5rem;
+    width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+.nav-links li a{
+    text-decoration: none;
+    text-decoration-color: white;
+    margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+    color: #61DAFB;
+}
+.nav-links li {
+    position: relative;
+}
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #61DAFB;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before{
+    width: 80%;
+}
+
+/*Styling Buttons*/
+.login-button{
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+.login-button:hover {
+    color: #131418;
+    background-color: #f2f5f7;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+.join-button{
+    color: #131418;
+    background-color: #61DAFB;
+    border: 1.5px solid #61DAFB;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.join-button:hover {
+    color: #f2f5f7;
+    background-color: transparent;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}

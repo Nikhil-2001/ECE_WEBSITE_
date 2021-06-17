@@ -1,0 +1,20 @@
+body{
+	overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: white;
+}
+
+#lightbox-invoker{
+  cursor: pointer;
+  height: 45px;
+  width:90px;
+  border-bottom-right-radius:90px;
+  border-bottom-left-radius: 90px;
+  position: absolute;
+  left: 45%;
+  top:0%; 
+}
+.cd-background-wrapper{
+	position: relative;
+
+}
